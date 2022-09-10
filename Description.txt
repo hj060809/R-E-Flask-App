@@ -1,0 +1,17 @@
+1. upload posting.py는 사이트에서 보여질 글 들을 생성 하는 파일 입니다.
+   따로 실행 시킬 필요 없습니다.
+
+2. app.py는 flask 웹 사이트를 여는 파일 입니다
+
+3. 필요한 라이브러리는 아래와 같습니다.
+   -sqlite3
+   -flask
+
+   ModuleNotFoundError: No Module Named 'sqlite3'
+   같은 에러가 뜨면
+
+   pip install sqlite3 명령어를 실행 시키면 됩니다.
+
+4. sqlite3 모듈을 사용하는 코드는 없다고 생각하셔도 무방합니다.
+
+5. WEB.db 파일이 데이터 베이스 파일이니 삭제하지 말아 주세요.

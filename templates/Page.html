@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        css와 js는 변경하면 V 뒤의 숫자를 올려 주세요.
+        
+        그렇지 않으면 변경 사항이 반영되지 않습니다
+        -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Page.css') }}?V=7">
+    <script type="text/javascript" src="{{ url_for('static', filename='Page.js') }}?V=24"></script>
+</head>
+<body>
+    <div id="nav_bar">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" id="logo" onclick="window.location.href='/'">
+    </div>
+
+    <div id="page">
+        <div id="topic"><!--글이 보여지는 부분 입니다.-->
+            <h1 id="title">{{title}}
+                <div id="posting_upload_time">{{upload_time}}</div>
+            </h1>
+            <div id="content">
+                {{content}}
+            </div>
+        </div>
+
+        <div id="comment_box"><!--댓글이 보여지는 부분 입니다.-->
+
+            <div id="input_box"><!--댓글 입력창 부분 입니다.-->
+                <textarea name="commentTxt" id="comment_input" placeholder="Type Comment" cols="30" rows="10"></textarea>
+                <img src="{{ url_for('static', filename='images/pos.png') }}" alt="" id="input_sentiment">
+                <input type="submit" value="Submit" id="submit" onclick="getComment()">
+            </div>
+
+            <div id="comments"><!--이미 저장된 댓글을 보여주는 부분 입니다. (javascript로 내부 내용을 생성하니 태그 안에 내용이 없습니다.)-->
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
